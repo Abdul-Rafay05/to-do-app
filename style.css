@@ -1,0 +1,139 @@
+                @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,403;1,403&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+                /* jost */
+                
+                @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,403;1,403&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+                * {
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                body {
+                    background: linear-gradient(180deg, #D9EDBF, #DCFFB7, #A8DF8E);
+                }
+                
+                .container-fluid_section {
+                    width: 100%;
+                    height: 100vh;
+                }
+                
+                .list_section {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 2px solid #7EAA92;
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 50%;
+                    min-width: 500px;
+                    max-height: 500px;
+                    overflow-y: scroll;
+                    margin: 3px;
+                }
+                
+                .input_section {
+                    background-color: #97BE5A;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 20px;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 10px rgba(46, 139, 86, 0.807);
+                }
+                
+                .input_section input {
+                    width: 70%;
+                    padding: 0 20px;
+                    border: 2px solid black;
+                    border-radius: 5px;
+                }
+                
+                .task_section {
+                    margin-top: 60px;
+                    background-color: #b1d080;
+                    padding: 30px;
+                    box-shadow: 0 2px 10px rgba(58, 143, 95, 0.807);
+                }
+                
+                .task_list_section {
+                    background-color: white;
+                    margin-top: 15px;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px;
+                    /* border-bottom: 6px solid black; */
+                    box-shadow: 6px 6px 0px #0a5200;
+                    border: 2px solid #0a5200;
+                    position: relative;
+                }
+                
+                .task_list_section:first-child {
+                    margin-top: 0px;
+                }
+                
+                .task_list {
+                    cursor: pointer;
+                    font-family: "Jost", sans-serif;
+                    color: black;
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+                
+                .complete_task {
+                    text-decoration: line-through;
+                    text-decoration-color: green;
+                    text-decoration-thickness: 2px;
+                }
+                
+                .task_complete {
+                    position: absolute;
+                    background-color: #97BE5A;
+                    color: rgb(0, 0, 0);
+                    padding: 2px 8px;
+                    border-radius: 5px;
+                    right: 3.5rem;
+                    display: none;
+                    font-family: "Dancing Script", cursive;
+                    font-size: 22px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+                
+                .show_complete {
+                    display: flex;
+                }
+                /* @media only screen and(max-width<=400px) {
+    body {
+        background-color: green;
+    }
+} */
+                
+                @media only screen and (width<=500px) {
+                    .input_section {
+                        flex-direction: column;
+                    }
+                    .input_section input {
+                        width: 100%;
+                        height: 50px;
+                        margin-bottom: 10px;
+                    }
+                    .list_section {
+                        min-width: 320px;
+                        padding: 20px 10px;
+                    }
+                    .task_section {
+                        padding: 30px 6px;
+                    }
+                    .task_complete {
+                        padding: 4px;
+                        font-size: 15px;
+                        background-color: transparent;
+                    }
+                    .task_list_section {
+                        box-shadow: 3px 4px 1px #0a5200;
+                    }
+                    .task_list {
+                        font-size: 18px;
+                    }
+                }
